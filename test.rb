@@ -1,3 +1,13 @@
+puts "トラック1周何ｍですか？"
+distance = gets.to_i
+puts "何周しますか？"
+rap = gets.to_i
+puts "総距離は#{distance * rap}mです"
+
+puts "鉛筆は何ダースありますか?"
+b = gets.to_i
+puts "鉛筆の総本数は#{b * 12}本です。"
+
 puts "創設年は西暦何年ですか?"
 start = gets.to_i
 puts "今年は西暦何年ですか?"
