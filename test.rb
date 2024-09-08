@@ -1,3 +1,7 @@
+puts "記念日の日付を入力してください(整数)"
+day = gets.to_i
+puts "記念日のイヴは#{day - 1}日です。"
+
 puts "トラック1周何ｍですか？"
 distance = gets.to_i
 puts "何周しますか？"
