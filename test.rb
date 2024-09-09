@@ -1,3 +1,12 @@
+puts "A君の獲得した経験値はいくつですか"
+ex1 = gets.to_i
+puts "B君の獲得した経験値はいくつですか"
+ex2 = gets.to_i
+puts "C君の獲得した経験値はいくつですか"
+ex3 = gets.to_i
+puts "3人合計は#{ex1+ex2+ex3}です"
+
+
 puts "記念日の日付を入力してください(整数)"
 day = gets.to_i
 puts "記念日のイヴは#{day - 1}日です。"
