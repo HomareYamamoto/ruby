@@ -1,3 +1,14 @@
+puts "現在人口増加は1年あたり何人ですか"
+input_line1 = gets.to_i
+puts "何年後の人口をシミュレーションしますか"
+input_line2 = gets.to_i
+puts "村の人口は現在100人。#{input_line2}年後には#{100 + input_line1 * input_line2}人である"
+
+
+puts "IDに設定するアルファベットを入力してください"
+name = gets.chomp
+puts "あなたのpaizaIDは#{"paiza" + name}です"
+
 puts "ご飯1合当たりのカロリーは540キロカロリーです。今日は何合食べますか"
 gou = gets.to_i
 puts "摂取カロリーは#{gou * 540}㎉です。"
