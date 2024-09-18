@@ -1,11 +1,25 @@
-puts "文字を入力してください"
-cha = gets.chomp
-num = cha.length.to_i
-puts "+#{"+" * num}+
-+#{cha}+
-+#{"+" * num}+"
+def order_confirm(order,num)
+  menu = []
+  
+  order.scan(order).length
+  
+end
 
-# word_kakomi(cha,num)
+puts "料理名を入力してください(アルファベット)"
+order = gets.to_s
+puts "メニューの単語数を入力してください(整数)"
+num = gets.to_i
+
+
+order_confirm(order,num)
+
+# puts "文字を入力してください"
+# cha = gets.chomp
+# num = cha.length.to_i
+# puts "+#{"+" * num}+
+# +#{cha}+
+# +#{"+" * num}+"
+
 
 
 # def present(n,x,y)
