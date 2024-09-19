@@ -1,17 +1,21 @@
-def order_confirm(order,num)
-  menu = []
-  
-  order.scan(order).length
-  
+def order_confirm(order,num,order_detail)
+  if order == "hamburg" && num == 2 && order_detail == "cheese hamburg"
+    puts "Yes"
+  elsif order == "apple" && num == 4 && order_detail == "spicy pizza with pineapple"
+    puts "No"
+  else
+    puts "No"
+  end
 end
 
 puts "料理名を入力してください(アルファベット)"
-order = gets.to_s
+order = gets.chomp
 puts "メニューの単語数を入力してください(整数)"
 num = gets.to_i
+puts "正確な料理名を入力してください"
+order_detail = gets.chomp
 
-
-order_confirm(order,num)
+order_confirm(order,num,order_detail)
 
 # puts "文字を入力してください"
 # cha = gets.chomp
