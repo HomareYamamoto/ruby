@@ -1,21 +1,46 @@
-def order_confirm(order,num,order_detail)
-  if order == "hamburg" && num == 2 && order_detail == "cheese hamburg"
-    puts "Yes"
-  elsif order == "apple" && num == 4 && order_detail == "spicy pizza with pineapple"
-    puts "No"
+def order_confirm(order,num)
+  if order.include?("hamburg")
+    menu = ["hamburg_menu", "hamburg", "cheese hamburg", "chiken egg hamburg"]
+    menu.each do |dishes|
+      puts dishes
+    end
+    puts "あなたの注文したい料理は#{menu[num]}です"
+    if menu[num].include?(" " + order)
+      puts "Yes"
+    else
+      puts "No"
+    end
+  elsif order.include?("apple")
+    menu = ["apple_menu", "apple", "hot apple", "two half apples", "spicy pizza with pineapple"]
+    menu.each do |dishes|
+      puts dishes
+    end
+    puts "あなたの注文したい料理は#{menu[num]}です"
+    if menu[num].include?(" " + order)
+      puts "Yes"
+    else
+      puts "No"
+    end
   else
-    puts "No"
+    menu = ["else_menu", "sushi", "tsukimi soba", "meat egg udon", "hot pad thai noodles"]
+    menu.each do |dishes|
+      puts dishes
+    end
+    puts "あなたの注文したい料理は#{menu[num]}です"
+    if menu[num].include?(" " + order)
+      puts "Yes"
+    else
+      puts "No"
+    end
   end
 end
 
-puts "料理名を入力してください(アルファベット)"
+puts "料理テーマを入力してください(アルファベット)"
 order = gets.chomp
 puts "メニューの単語数を入力してください(整数)"
 num = gets.to_i
-puts "正確な料理名を入力してください"
-order_detail = gets.chomp
 
-order_confirm(order,num,order_detail)
+order_confirm(order,num)
 
 # puts "文字を入力してください"
 # cha = gets.chomp
