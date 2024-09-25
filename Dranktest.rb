@@ -1,23 +1,30 @@
-def push_count
-  puts "何回入力しますか?"
-  num = gets.to_i
-  i = 1
-  words = []
-  while i <= num do
-    if i == 11
-      puts "処理を終了します"
-      break
-    end
-    puts "文字を入力してください"
-    words.push(gets.chomp.split(" ").map &:to_i)
-    i += 1
-  end
-  words.each do |word|
-  puts word
-  end
-end
+puts "あなたのニックネームは？"
+word = gets.chomp
+puts "あなたのゲームIDは"
+puts "#{word.delete('aiueo')}です。" #delete('')でカッコ内に除去したい文字を羅列する
 
-push_count
+
+
+# def push_count
+#   puts "何回入力しますか?"
+#   num = gets.to_i
+#   i = 1
+#   words = []
+#   while i <= num do
+#     if i == 11
+#       puts "処理を終了します"
+#       break
+#     end
+#     puts "文字を入力してください"
+#     words.push(gets.chomp.split(" ").map &:to_i)
+#     i += 1
+#   end
+#   words.each do |word|
+#   puts word
+#   end
+# end
+
+# push_count
 
 
 # puts "現在人口増加は1年あたり何人ですか"
