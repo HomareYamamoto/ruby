@@ -1,7 +1,26 @@
-puts "あなたのニックネームは？"
-word = gets.chomp
-puts "あなたのゲームIDは"
-puts "#{word.delete('aiueo')}です。" #delete('')でカッコ内に除去したい文字を羅列する
+
+
+def janken()
+  matches = gets.to_i
+  alice_win = 0
+  matches.times do
+    alice_hand = gets.chomp
+    bob_hand = gets.chomp
+    if (alice_hand == "g" && bob_hand == "c") ||
+       (alice_hand == "c" && bob_hand == "p") ||
+       (alice_hand == "p" && bob_hand == "g")
+      alice_win += 1
+    end
+  end
+  puts alice_win
+end
+
+janken()
+
+# puts "あなたのニックネームは？"
+# word = gets.chomp
+# puts "あなたのゲームIDは"
+# puts "#{word.delete('aiueo')}です。" #delete('')でカッコ内に除去したい文字を羅列する
 
 
 
@@ -94,7 +113,7 @@ puts "#{word.delete('aiueo')}です。" #delete('')でカッコ内に除去し�
 # name = gets.chomp
 # puts "あなたのゲームIDは#{name}Aです"
 # # chompは文字列の開業を防ぐメソッドです。
-# # 使い方としてはname = gets(:chomp)　もある
+# # 使い方としてはname = gets(:chomp)もある
 
 # puts "出金額を入力してください。※数料は120円です。"
 # money = gets.to_i
