@@ -1,21 +1,39 @@
-
-
-def janken()
-  matches = gets.to_i
-  alice_win = 0
-  matches.times do
-    alice_hand = gets.chomp
-    bob_hand = gets.chomp
-    if (alice_hand == "g" && bob_hand == "c") ||
-       (alice_hand == "c" && bob_hand == "p") ||
-       (alice_hand == "p" && bob_hand == "g")
-      alice_win += 1
+def traffic_jam()
+  puts "渋滞に巻き込まれている車の台数は?"
+  car = gets.to_i
+  puts "車間何m以下を渋滞と定義しますか?"
+  traffic = gets.to_i
+  distance = 0
+  a = car - 1
+  a.times do
+    puts "車間距離を入力してください"
+    syakan = gets.to_i
+    if syakan <= traffic
+      distance += syakan
     end
   end
-  puts alice_win
+  puts "車間#{traffic}m以下の渋滞の総距離は"
+  puts distance
 end
 
-janken()
+traffic_jam()
+
+# def janken()
+#   matches = gets.to_i
+#   alice_win = 0
+#   matches.times do
+#     alice_hand = gets.chomp
+#     bob_hand = gets.chomp
+#     if (alice_hand == "g" && bob_hand == "c") ||
+#       (alice_hand == "c" && bob_hand == "p") ||
+#       (alice_hand == "p" && bob_hand == "g")
+#       alice_win += 1
+#     end
+#   end
+#   puts alice_win
+# end
+
+# janken()
 
 # puts "あなたのニックネームは？"
 # word = gets.chomp
