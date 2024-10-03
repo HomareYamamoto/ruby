@@ -1,22 +1,40 @@
-def traffic_jam()
-  puts "渋滞に巻き込まれている車の台数は?"
-  car = gets.to_i
-  puts "車間何m以下を渋滞と定義しますか?"
-  traffic = gets.to_i
-  distance = 0
-  a = car - 1
-  a.times do
-    puts "車間距離を入力してください"
-    syakan = gets.to_i
-    if syakan <= traffic
-      distance += syakan
+def cm_dicision()
+  puts "削除対象となるメールの件名のNGワードを入力してください"
+  ngword = gets.chomp
+  puts "メールの件数は?"
+  mail_number = gets.to_i
+  mail_number.times do
+  puts "メールの件名は?"
+  mail_title = gets.chomp
+    if mail_title.include?(ngword)
+      puts "Yes"
+    else
+      puts "No"
     end
   end
-  puts "車間#{traffic}m以下の渋滞の総距離は"
-  puts distance
 end
 
-traffic_jam()
+cm_dicision()
+
+# def traffic_jam()
+#   puts "渋滞に巻き込まれている車の台数は?"
+#   car = gets.to_i
+#   puts "車間何m以下を渋滞と定義しますか?"
+#   traffic = gets.to_i
+#   distance = 0
+#   a = car - 1
+#   a.times do
+#     puts "車間距離を入力してください"
+#     syakan = gets.to_i
+#     if syakan <= traffic
+#       distance += syakan
+#     end
+#   end
+#   puts "車間#{traffic}m以下の渋滞の総距離は"
+#   puts distance
+# end
+
+# traffic_jam()
 
 # def janken()
 #   matches = gets.to_i
