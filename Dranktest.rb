@@ -1,20 +1,42 @@
-def cm_dicision()
-  puts "削除対象となるメールの件名のNGワードを入力してください"
-  ngword = gets.chomp
-  puts "メールの件数は?"
-  mail_number = gets.to_i
-  mail_number.times do
-  puts "メールの件名は?"
-  mail_title = gets.chomp
-    if mail_title.include?(ngword)
-      puts "Yes"
+def elevator_mentenance()
+  puts "エレベーターの稼働回数を入力してください"
+  riyou = gets.to_i
+  syoki = 1
+  sum_distance = 0 #「+=」で加算させていく変数は事前に初期値を定義することを忘れない
+  riyou.times do
+    kai = gets.to_i
+    if syoki <= kai
+      distance = kai - syoki
+      syoki = kai
+      sum_distance += distance
     else
-      puts "No"
+      distance = syoki - kai
+      syoki = kai
+      sum_distance += distance
     end
   end
+  puts sum_distance
 end
 
-cm_dicision()
+elevator_mentenance()
+
+# def cm_dicision()
+#   puts "削除対象となるメールの件名のNGワードを入力してください"
+#   ngword = gets.chomp
+#   puts "メールの件数は?"
+#   mail_number = gets.to_i
+#   mail_number.times do
+#   puts "メールの件名は?"
+#   mail_title = gets.chomp
+#     if mail_title.include?(ngword)
+#       puts "Yes"
+#     else
+#       puts "No"
+#     end
+#   end
+# end
+
+# cm_dicision()
 
 # def traffic_jam()
 #   puts "渋滞に巻き込まれている車の台数は?"
