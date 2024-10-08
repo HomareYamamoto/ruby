@@ -1,24 +1,43 @@
-def elevator_mentenance()
-  puts "エレベーターの稼働回数を入力してください"
-  riyou = gets.to_i
-  syoki = 1
-  sum_distance = 0 #「+=」で加算させていく変数は事前に初期値を定義することを忘れない
-  riyou.times do
-    kai = gets.to_i
-    if syoki <= kai
-      distance = kai - syoki
-      syoki = kai
-      sum_distance += distance
-    else
-      distance = syoki - kai
-      syoki = kai
-      sum_distance += distance
+def battle_simulation()
+  battle = gets.to_i  # バトル回数の入力
+  my_level = gets.to_i  # 自分の最初のレベルを入力
+  battle.times do
+    enemy_level = gets.to_i  # 敵のレベルを入力
+    if my_level > enemy_level
+      difference = enemy_level / 2
+      my_level += difference
+    elsif my_level < enemy_level
+      difference = my_level / 2
+      my_level = difference
     end
   end
-  puts sum_distance
+  puts my_level  # 最終的な自分のレベルを出力
 end
 
-elevator_mentenance()
+battle_simulation()
+
+
+# def elevator_mentenance()
+#   puts "エレベーターの稼働回数を入力してください"
+#   riyou = gets.to_i
+#   syoki = 1
+#   sum_distance = 0 #「+=」で加算させていく変数は事前に初期値を定義することを忘れない
+#   riyou.times do
+#     kai = gets.to_i
+#     if syoki <= kai
+#       distance = kai - syoki
+#       syoki = kai
+#       sum_distance += distance
+#     else
+#       distance = syoki - kai
+#       syoki = kai
+#       sum_distance += distance
+#     end
+#   end
+#   puts sum_distance
+# end
+
+# elevator_mentenance()
 
 # def cm_dicision()
 #   puts "削除対象となるメールの件名のNGワードを入力してください"
