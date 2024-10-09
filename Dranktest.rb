@@ -1,20 +1,48 @@
-def battle_simulation()
-  battle = gets.to_i  # バトル回数の入力
-  my_level = gets.to_i  # 自分の最初のレベルを入力
-  battle.times do
-    enemy_level = gets.to_i  # 敵のレベルを入力
-    if my_level > enemy_level
-      difference = enemy_level / 2
-      my_level += difference
-    elsif my_level < enemy_level
-      difference = my_level / 2
-      my_level = difference
+def tyouhoukei()
+  mai = gets.to_i
+  hen = gets.to_f
+  kai = mai - 1
+  sum_hen = hen
+  kai.times do
+    kasane = gets.to_f
+    if kasane >= 1 && kasane <= hen / 2
+      add_hen = hen - kasane
+      sum_hen += add_hen
+    else
+      puts "無効な重なりの値です"
+      return
     end
   end
-  puts my_level  # 最終的な自分のレベルを出力
+  area = hen * sum_hen
+  puts area
 end
 
-battle_simulation()
+tyouhoukei()
+
+# hen = gets.to_i
+# kasane = gets.to_i
+# kasane = [[1, kasane].max, hen / 2].min
+# puts "kasaneの値は#{kasane}です"
+
+
+# def battle_simulation()
+#   battle = gets.to_i  # バトル回数の入力
+#   my_level = gets.to_i  # 自分の最初のレベルを入力
+#   battle.times do
+#     enemy_level = gets.to_i  # 敵のレベルを入力
+#     if my_level > enemy_level
+#       difference = enemy_level / 2
+#       my_level += difference
+#     elsif my_level < enemy_level
+#       difference = my_level / 2
+#       my_level = difference
+#     end
+#   end
+#   puts my_level  # 最終的な自分のレベルを出力
+# end
+
+# battle_simulation()
+
 
 
 # def elevator_mentenance()
