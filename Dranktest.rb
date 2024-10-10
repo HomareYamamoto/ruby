@@ -1,23 +1,46 @@
-def tyouhoukei()
-  mai = gets.to_i
-  hen = gets.to_f
-  kai = mai - 1
-  sum_hen = hen
-  kai.times do
-    kasane = gets.to_f
-    if kasane >= 1 && kasane <= hen / 2
-      add_hen = hen - kasane
-      sum_hen += add_hen
+def paica()
+  puts "チャージ金額を入力してください"
+  zandaka = gets.to_i
+  puts "バス利用回数を入力してください"
+  idou = gets.to_i
+  sum_point = 0
+  idou.times do
+    puts "運賃を入力してください"
+    hiyou = gets.to_i
+    point = hiyou / 10
+    if sum_point >= hiyou
+      sum_point -= hiyou
     else
-      puts "無効な重なりの値です"
-      return
+      zandaka -= hiyou
+      sum_point += point
     end
+    puts "現在の残高#{zandaka}円
+累計ポイントは#{sum_point}"
   end
-  area = hen * sum_hen
-  puts area
 end
 
-tyouhoukei()
+paica()
+
+# def tyouhoukei()
+#   mai = gets.to_i
+#   hen = gets.to_f
+#   kai = mai - 1
+#   sum_hen = hen
+#   kai.times do
+#     kasane = gets.to_f
+#     if kasane >= 1 && kasane <= hen / 2
+#       add_hen = hen - kasane
+#       sum_hen += add_hen
+#     else
+#       puts "無効な重なりの値です"
+#       return
+#     end
+#   end
+#   area = hen * sum_hen
+#   puts area
+# end
+
+# tyouhoukei()
 
 # hen = gets.to_i
 # kasane = gets.to_i
