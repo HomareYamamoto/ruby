@@ -1,25 +1,45 @@
-def paica()
-  puts "チャージ金額を入力してください"
-  zandaka = gets.to_i
-  puts "バス利用回数を入力してください"
-  idou = gets.to_i
-  sum_point = 0
-  idou.times do
-    puts "運賃を入力してください"
-    hiyou = gets.to_i
-    point = hiyou / 10
-    if sum_point >= hiyou
-      sum_point -= hiyou
-    else
-      zandaka -= hiyou
-      sum_point += point
-    end
-    puts "現在の残高#{zandaka}円
-累計ポイントは#{sum_point}"
-  end
+input_line = 1000
+n=1
+input_line.times do
+    puts n
+    n += 1
 end
 
-paica()
+
+
+
+# def hyphen()
+#   word = gets.chomp
+#   if word.count("-") >= 1
+
+#   end
+
+# end
+
+# hyphen()
+
+# def paica()
+#   puts "チャージ金額を入力してください"
+#   zandaka = gets.to_i
+#   puts "バス利用回数を入力してください"
+#   idou = gets.to_i
+#   sum_point = 0
+#   idou.times do
+#     puts "運賃を入力してください"
+#     hiyou = gets.to_i
+#     point = hiyou / 10
+#     if sum_point >= hiyou
+#       sum_point -= hiyou
+#     else
+#       zandaka -= hiyou
+#       sum_point += point
+#     end
+#     puts "現在の残高#{zandaka}円
+# 累計ポイントは#{sum_point}"
+#   end
+# end
+
+# paica()
 
 # def tyouhoukei()
 #   mai = gets.to_i
