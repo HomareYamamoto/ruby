@@ -1,9 +1,16 @@
-input_line = 1000
-n=1
-input_line.times do
-    puts n
-    n += 1
-end
+input_line = (1..1000).to_a
+puts input_line.join(" ")
+
+# 1..nは範囲を指定している
+# to_aはそれを配列に変換している
+# join(" ") は各数値を半角スペースで区切って連結します。
+
+# input_line = 1000
+# n=1
+# input_line.times do
+#     puts n
+#     n += 1
+# end
 
 
 
