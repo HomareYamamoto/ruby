@@ -1,6 +1,32 @@
-input_line = (1..1000).to_a
-puts input_line.join(" ")
+def word_lines()
+  words = gets.split(' ')
+  puts words
+end
+word_lines()
+# 一行に複数ある入力を区切って複数行で出力する方法
 
+# def word_lines()
+#   words = []
+#   10.times do
+#       word = gets.chomp
+#       words << word
+#   end
+#   puts words.join(" ")
+# end
+# word_lines()
+# 複数行入力を一行で出力する方法
+
+# def words()
+#   sample=[]
+#   10.times do
+#     sample.push(gets.chomp.split(" ").map &:to_i)
+#   end
+#   print sample
+# end
+# words()
+
+# input_line = (1..1000).to_a
+# puts input_line.join(" ")
 # 1..nは範囲を指定している
 # to_aはそれを配列に変換している
 # join(" ") は各数値を半角スペースで区切って連結します。
