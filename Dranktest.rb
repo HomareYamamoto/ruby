@@ -1,8 +1,18 @@
-def word_lines()
-  words = gets.split(' ')
-  puts words
+def syutsuryoku()
+  i = gets.to_i
+  for n in 1..i do
+    puts n
+  end
 end
-word_lines()
+
+syutsuryoku()
+# 入力した数値まで1から出力
+
+# def word_lines()
+#   words = gets.split(' ')
+#   puts words
+# end
+# word_lines()
 # 一行に複数ある入力を区切って複数行で出力する方法
 
 # def word_lines()
