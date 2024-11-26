@@ -1,11 +1,30 @@
-def syutsuryoku()
-  i = gets.to_i
-  for n in 1..i do
-    puts n
+def ramen()
+  i = 0 #赤字店舗の数をカウントする変数
+  n = gets.to_i #店舗数
+  m = gets.to_i #経営期間(月)
+  a = gets.to_i #建設費用
+  b = gets.to_i #人件費
+  c = gets.to_i #ラーメン1杯当たりの利益
+  n.times do
+    d = gets.to_i #ラーメンの杯数
+    profit = c * d - a - b * m
+    if profit < 0
+      i += 1
+    end
   end
+  puts i
 end
 
-syutsuryoku()
+ramen()
+
+# def syutsuryoku()
+#   i = gets.to_i
+#   for n in 1..i do
+#     puts n
+#   end
+# end
+
+# syutsuryoku()
 # 入力した数値まで1から出力
 
 # def word_lines()
